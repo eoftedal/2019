@@ -1,21 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-       		<meta charset="utf-8">
-    		<title>{{ page.title }}</title>
-    	<link rel="stylesheet" href="/assets/css/style.css">
-  	</head>
-	<body>
-		<div id="header">
-			<section class="image" title="Photo by: Hans Permana from Oslo, Norway (https://www.flickr.com/photos/128730796@N02/37590376240)">
-		        <h1>BSides Oslo 2019</h1>
-		        <p><b>May 23 2019</b></p>
-		</div>
-		<div id="content">
-		{{ content }}
-
-		<div id="footer">
-			<p>Header photo by: Hans Permana from Oslo, Norway (https://www.flickr.com/photos/128730796@N02/37590376240)</p>
-		</div>
-	</body>
-</html>
+  {% include head.html %}
+  <body>
+      {% include header.html %}
+        {{ content }}
+      {% include footer.html %}
+  </body>
