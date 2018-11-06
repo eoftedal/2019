@@ -6,6 +6,10 @@ email_info: info@bsidesoslo.no
 email_cfp: cfp@bsidesoslo.no
 twitter_username: oslobsides
 
+
+sass:
+  sass_dir: "src/styles"
+
 exclude: ['src']
 
 defaults:

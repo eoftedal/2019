@@ -1,4 +1,4 @@
-#about {
+#about, section {
   width: 90%;
   margin: 0 auto;
   max-width: 960px;
@@ -27,7 +27,15 @@
   }
 }
 
-.user-details {
-  text-align: center;
+.user-details, .details, .content-section {
+  text-align: left;
   margin: 5px auto;
+}
+
+.user-details h1, .details h1, .content-section h1 {
+  text-align: center;
+}
+
+#team ul {
+  list-style-type: none;
 }
