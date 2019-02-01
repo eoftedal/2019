@@ -9,11 +9,22 @@ email_cfp: cfp@bsidesoslo.no
 cfp_form: https://goo.gl/forms/dWVz94nK7Ohkn3eK2
 twitter_username: oslobsides
 
+sponsors:
+  gold:
+  - name: Nagarro
+    logo: Nagarro.png
+    website: https://www.nagarro.com/en
+  - name: Bouvet
+    logo: Bouvet.png
+    website: https://www.bouvet.no
+  standard:
+  community:
+
 
 sass:
   sass_dir: "src/styles"
 
-exclude: ['src']
+exclude: ['src', 'node_modules', 'gulpfile.js','.sass-cache']
 
 defaults:
 - scope:

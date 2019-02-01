@@ -41,14 +41,42 @@ title: BSides Oslo - May 23rd, 2019
  <div class="user-details">
   <section id="sponsorship">
     <h1>Sponsors</h1>
+    {% if site.sponsors.gold != null %}
     <h2>Gold sponsors</h2>
     <div class="sponsor-logo-bar">
-	    <img src="/assets/images/sponsors/Nagarro.png" alt="Nagarro" />
-	    <img src="/assets/images/sponsors/Bouvet.png" alt="Bouvet" />
+	{% for sponsor in site.sponsors.gold %}
+
+	<a title="{{ sponsor.name }}" href="{{ sponsor.website  }}"><img src="/assets/images/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
+	{% endfor %}	
     </div>
+   {% endif %}
+    {% if site.sponsors.standard != null %}
+    <h2>Standard sponsors</h2>
+    <div class="sponsor-logo-bar">
+	{% for sponsor in site.sponsors.standard %}
+
+	<a title="{{ sponsor.name }}" href="{{ sponsor.website  }}"><img src="/assets/images/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
+	{% endfor %}	
+    </div>
+   {% endif %}
+    {% if site.sponsors.community != null %}
+    <h2>Gold sponsors</h2>
+    <div class="sponsor-logo-bar">
+	{% for sponsor in site.sponsors.community %}
+
+	<a title="{{ sponsor.name }}" href="{{ sponsor.website  }}"><img src="/assets/images/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
+	{% endfor %}	
+    </div>
+   {% endif %}
     <p>We're still looking for sponsors. If you are interested (or know of someone who might be), feel free to look at the <a href="/files/sponsorship.pdf">sponsorship document</a> or check out the <a href="https://www.deltager.no/bsides_oslo_sponsorship_21122018">sponsor registration page</a>. If you have any question, get in touch at  <a href="mailto:{{site.email_sponsorship}}">{{site.email_sponsorship}}</a>.</p>
   </section>
 
+</div>
+<div class="user-details">
+<section id="CoC">
+<h1>Code of conduct</h1>
+<p>BSides Oslo is a safe and inclusive community based conference, aimed at sharing information security knowledge. Speakers, participants, organizers and voulenteers are required to read and adhere to the <a href="/files/Bsides_Oslo_CoC.pdf" title="Code of conduct">code of conduct</a>.
+</section>
 </div>
 <div class="user-details">
   <section id="team">

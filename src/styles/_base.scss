@@ -22,6 +22,7 @@ h1 {
 }
 h2 {
     font-size: 2rem;
+    text-align: center;
 }
 h3 {
     font-size: 1.5rem;
@@ -42,3 +43,18 @@ a img {
 sup, sub {
     line-height: 0;
 }
+
+.sponsor-logo-bar {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.sponsor-logo-bar img {
+    max-width: 30%;
+    padding: 40px;
+    border: none;
+}
+
