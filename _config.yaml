@@ -23,10 +23,6 @@ sponsors:
   standard:
   community:
 
-
-sass:
-  sass_dir: "src/styles"
-
 exclude: ['src', 'node_modules', 'gulpfile.js','.sass-cache']
 
 defaults:

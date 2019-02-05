@@ -53,8 +53,21 @@ sup, sub {
 
 
 .sponsor-logo-bar img {
-    max-width: 30%;
-    padding: 5%;
     border: none;
+}
+
+.gold img {
+    max-width: 30%;
+    padding: 4%;
+}
+
+.standard img {
+    max-width: 20%;
+    padding: 3%;
+}
+
+.community img {
+    max-width: 10%;
+    padding: 2%;
 }
 
