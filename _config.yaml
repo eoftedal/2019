@@ -21,6 +21,9 @@ sponsors:
     logo: Basefarm.png
     website: https://www.basefarm.com/no/
   standard:
+    - name: TrustedSec
+    logo: trustedsec.png
+    website: https://www.trustedsec.com/
   community:
 
 exclude: ['src', 'node_modules', 'gulpfile.js','.sass-cache']
