@@ -19,22 +19,9 @@ gulp.task('jekyll-build', function (done) {
 		.on('close', done);
 });
 
-/*
- * Rebuild Jekyll & reload browserSync
- */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-	browserSync.reload();
-});
-
-/*
- * Build the jekyll site and launch browser-sync
- */
-gulp.task('browser-sync', ['jekyll-build'], function() {
-	browserSync({
-		server: {
-			baseDir: '_site'
-		}
-	});
+gulp.task('host',['jekyll-build'], function (done) {
+	return cp.spawn(jekyllCommand, ['serve', '-H', '0.0.0.0', '--watch'], {stdio: 'inherit'})
+		.on('close', done);
 });
 
 /*
@@ -86,4 +73,4 @@ gulp.task('watch', function() {
   gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], ['jekyll-rebuild']);
 });
 
-gulp.task('default', ['js', 'sass', 'fonts', 'browser-sync', 'watch']);
+gulp.task('default', ['js', 'sass', 'fonts', 'host']);

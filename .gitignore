@@ -2,3 +2,7 @@
 Gemfile
 Gemfile.lock
 _site/
+package-lock.json
+node_modules/
+*.swp
+.sass-cache/
