@@ -25,9 +25,7 @@ sponsors:
     logo: trustedsec.png
     website: https://www.trustedsec.com/
   community:
-  - name: Blaze Information Security
-    logo: Blaze.png
-    website: https://www.blazeinfosec.com/ 
+  
 
 exclude: ['src', 'node_modules', 'gulpfile.js','.sass-cache']
 
