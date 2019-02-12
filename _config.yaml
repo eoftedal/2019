@@ -24,8 +24,17 @@ sponsors:
   - name: TrustedSec
     logo: trustedsec.png
     website: https://www.trustedsec.com/
+  - name: Transcendent Group
+    logo: Transcendent.png
+    website: https://transcendentgroup.com/
   community:
-  
+  - name: Blaze Information Security
+    logo: Blaze.png
+    website: https://www.blazeinfosec.com/
+  - name: TurtleSec
+    logo: turtlesec.png
+    website: https://turtlesec.no/
+   
 
 exclude: ['src', 'node_modules', 'gulpfile.js','.sass-cache']
 
