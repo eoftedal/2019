@@ -12,7 +12,6 @@ article, aside, figcaption, figure, footer, header, nav, section {
     display: block;
 }
 h1, h2, h3, h4, stong {
-    margin-top: 1em;
     padding-top: 1em;
     line-height: 1.25;
     color: #333;
@@ -54,7 +53,8 @@ sup, sub {
 
 .sponsor-logo-bar img {
     border: none;
-    padding-bottom: 4%;
+    margin:0;
+    padding-bottom: 2%;
     padding-right: 4%;
 }
 
@@ -69,4 +69,17 @@ sup, sub {
 .community img {
     max-width: 10%;
 }
+@media only screen and (max-width: 600px){
 
+.gold img {
+    max-width: 40%;
+}
+	
+.standard img {
+    max-width: 30%;
+}
+	
+.community img {
+    max-width: 20%;
+}
+}
