@@ -27,7 +27,10 @@ sponsors:
   - name: Transcendent Group
     logo: Transcendent.png
     website: https://transcendentgroup.com/
-  community:
+  - name: Gelato
+    logo: Gelato.png
+    website: https://gelato.com
+ community:
   - name: Blaze Information Security
     logo: Blaze.png
     website: https://www.blazeinfosec.com/
