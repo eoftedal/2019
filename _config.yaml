@@ -48,7 +48,7 @@ sponsors:
     website: https://turtlesec.no/
   - name: ISACA
     logo: isaca.png
-    website: http://www.isaca.org/chapters2/norway/Pages/default.aspx
+    website: http://engage.isaca.org/norwaychapter/
    
 
 exclude: ['src', 'node_modules', 'gulpfile.js','.sass-cache']
