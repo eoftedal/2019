@@ -8,18 +8,20 @@ title: BSides Oslo - May 23rd, 2019
 
     <p>We're working with the support of the kind and experienced folks at <a href="http://www.securitybsides.org">securitybsides.org</a> to bring a new kind of infosec event to Oslo. The plan is to start with a 1-day, 1-track event with the hope of expanding in the future. The date will be May 23rd, 2019, at MESH in the middle of central Oslo.</p>
     
-    <p> We've launched and are currently accepting submission in our <a href="#cfp">call for papers (CFP)</a> and have officially started <a href="#sponsorship">fundraising.</a></p>
   </section>
 </div>
- <div class="user-details">
-   <section id="CFP">
-      <h1>CFP</h1>
-      <p><b>Our Call for Presenters is now closed, stay tuned for the program.</b></p>
- 
+ <div id="speakers">
+   <section id="Speakers">
+      <h1>Speakers</h1>
+      {% for speaker in site.speakers %}
+      <div class="speaker"><div class="image" style="background-image: url(/assets/images/speakers/{{ speaker.image }})" alt="{{ speaker.name }}"></div>
+        <p><span class="name"><b>{{ speaker.name }}</b></span>{% if speaker.organization != null %}<br/><span class="organization">{{ speaker.organization }}</span>{% endif %}</p>
+      </div>
+      {% endfor %}
       </section>
 </div>
  <div class="user-details">
-  <section id="sponsorship">
+  <section id="Sponsors">
     <h1>Sponsors</h1>
     {% if site.sponsors.gold != null %}
     <h2>Gold sponsors</h2>
