@@ -35,7 +35,10 @@ sponsors:
     website: https://www.bdo.no/nb-no/tjenester/radgivning/cybersecurity
   - name: Paranoia
     logo: Paranoia.png
-    website: https://paranoia.watchcom.no/   
+    website: https://paranoia.watchcom.no/
+  - name: Sopra Steria
+    logo: SopraSteria.png
+    website: https://www.soprasteria.no/       
   community:
   - name: Blaze Information Security
     logo: Blaze.png
@@ -43,6 +46,9 @@ sponsors:
   - name: TurtleSec
     logo: turtlesec.png
     website: https://turtlesec.no/
+  - name: ISACA
+    logo: isaca.png
+    website: http://www.isaca.org/chapters2/norway/Pages/default.aspx
    
 
 exclude: ['src', 'node_modules', 'gulpfile.js','.sass-cache']
