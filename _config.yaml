@@ -10,6 +10,12 @@ cfp_form:
 twitter_username: oslobsides
 
 speakers:
+  - name: Marit Iren R. Tokle
+    company: Sopra Steria
+    picture: marit_tokle.jpg
+  - name: Bendik Hagen
+    company: 
+    picture: default.jpg    
 
 sponsors:
   gold:
