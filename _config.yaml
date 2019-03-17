@@ -10,6 +10,10 @@ cfp_form:
 twitter_username: oslobsides
 
 speakers:
+  - name: Marit Iren R. Tokle
+    image: marit_tokle.jpg
+  - name: Bendik Hagen
+    image: default.png    
 
 sponsors:
   gold:
