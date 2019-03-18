@@ -13,7 +13,9 @@ speakers:
   - name: Marit Iren R. Tokle
     image: marit_tokle.jpg
   - name: Bendik Hagen
-    image: default.png    
+    image: default.png
+  - name: Vetle Økland
+    image: vetle.jpg    
 
 sponsors:
   gold:
