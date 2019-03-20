@@ -15,7 +15,14 @@ speakers:
   - name: Bendik Hagen
     image: bendik.jpg
   - name: Vetle Økland
-    image: vetle.jpg    
+    image: vetle.jpg 
+  - name: Lorena Carthy
+    image: lorena.jpg 
+  - name: Ruben Jernslett
+    image: Ruben.jpg
+  - name: David Lodge
+    image: DavidLodge.jpg
+
 
 sponsors:
   gold:
