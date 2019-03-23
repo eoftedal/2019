@@ -1,0 +1,23 @@
+<html lang="en">
+{% include head.html %}
+<body>
+{% include small_header.html %}
+<div id="talk">
+<h2>{{ page.title }}</h2>
+  <p>{{ content }}</p>
+
+  <h3>Speakers:</h3>
+  {% for speaker in page.speakers %}
+    <div class="speaker">
+      <div class="image" style="background-image: url(/assets/images/speakers/{{speaker.image}}" alt="{{ speaker.name }}"></div>
+         <p class="name">{{ speaker.name }}</p>
+         <p class="organization"><i>{{ speaker.organization }} </i></p>
+         <p class="bio">{{ speaker.bio }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{%include footer.html %}
+</body>
+</html>
+

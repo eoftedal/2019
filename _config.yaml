@@ -9,11 +9,10 @@ email_cfp: cfp@bsidesoslo.no
 cfp_form: 
 twitter_username: oslobsides
 
-speakers:
-  - name: Marit Iren R. Tokle
-    image: marit_tokle.jpg
-  - name: Bendik Hagen
-    image: default.png    
+collections:
+  talks:
+    output: true
+    layout: talks
 
 sponsors:
   gold:
@@ -58,6 +57,10 @@ sponsors:
    
 
 exclude: ['src', 'node_modules', 'gulpfile.js','.sass-cache']
+
+markdown: kramdown
+kramdown:
+  input: GFM
 
 defaults:
 - scope:
