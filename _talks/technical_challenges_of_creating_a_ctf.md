@@ -6,7 +6,7 @@ speakers:
   image: marit_tokle.jpg
   bio: Marit is a Mobile Consultant at Sopra Steria. She is passionate about teaching cyber security as she continuously strives towards improving TG:Hack and the hacking group UiO-CTF’s workshops, presentations and hacking competitions.
 - name: Bendik Hagen
-  image: default.png
+  image: bendik.jpg
   bio: Bendik Hagen works as a security analyst at mnemonic, with a focus on network security and DFIR (digital forensics and incident response). In TG:Hack he creates tasks for forensics and reverse engineering, as well as monitor and manage the CTF infrastructure.
 ---
 
