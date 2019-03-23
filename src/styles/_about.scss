@@ -1,11 +1,33 @@
 #about, section {
   width: 90%;
   margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
   max-width: 960px;
   @media only screen and (min-width: $cut) {
     width: 80%;
   }
 }
+
+.inverted {
+  background: $main;
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+.inverted h1 {
+  color: #fff;
+  margin: 0;
+}
+
+.inverted a {
+  color: #fff;
+}
+
+.inverted a:visited {
+  color: #ccc;
+}
+
 
 .tech {
   margin: 10px;

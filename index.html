@@ -4,18 +4,22 @@ title: BSides Oslo - May 23rd, 2019
  <div id="speakers">
    <section id="Speakers">
       <h1>Speakers</h1>
-      {% if site.speakers != null %}
-      {% for speaker in site.speakers %}
-      <div class="speaker"><div class="image" style="background-image: url(/assets/images/speakers/{{ speaker.image }})" alt="{{ speaker.name }}"></div>
-        <p><span class="name"><b>{{ speaker.name }}</b></span>{% if speaker.organization != null %}<br/><span class="organization">{{ speaker.organization }}</span>{% endif %}</p>
-      </div>
+      {% if site.talks != null %}
+      {% for talk in site.talks %}
+
+      {% for speaker in talk.speakers %}
+      <a href="{{ talk.url }}"><div class="speaker"><div class="image" style="background-image: url(/assets/images/speakers/{{ speaker.image }})" alt="{{ speaker.name }}"></div>
+	<div class="placeholderText name"><p>{{ speaker.name }}</p></div><div class="placeholderText talk"><p>{{ talk.title }}</p></div>
+      </div></a>
+      {% endfor %}
+      
       {% endfor %}
       {% else %}
       <p>We'll start announcing speakers shortly</p>
       {% endif %}
       </section>
 </div>
- <div class="user-details" style="padding-top:20px;">
+ <div class="user-details inverted">
    <section id="about">
 	   <h1>About</h1>
 	   <p>Security BSides is a global network of independent community-driven and inclusive information security events. The first Security BSides in Oslo will be held on May 23rd, 2019 at MESH in the middle of central Oslo.</p><p>We've already gotten a lot of support from the local community, including <a href="#Sponsors">several sponsors</a>. We've recently concluded our CFP as well, and will be <a href="#Speakers">announcing speakers</a> in the time to come.</p>
@@ -57,7 +61,7 @@ title: BSides Oslo - May 23rd, 2019
   </section>
 
 </div>
-<div class="user-details">
+<div class="user-details inverted">
 <section id="CoC">
 <h1>Code of conduct</h1>
 <p>BSides Oslo is a safe and inclusive community based conference, aimed at sharing information security knowledge. Speakers, participants, organizers and voulenteers are required to read and adhere to the <a href="/files/Bsides_Oslo_CoC.pdf" title="Code of conduct">code of conduct</a>.
