@@ -5,7 +5,7 @@ RUN apt-get update
 
 RUN apt-get install -y python-pygments ruby2.3-dev ruby2.3 gem gcc make 
 
-RUN gem install jekyll rdiscount kramdown
+RUN gem install jekyll rdiscount
 
 VOLUME /src
 EXPOSE 4000
