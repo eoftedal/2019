@@ -54,6 +54,9 @@ sponsors:
   - name: ISACA
     logo: isaca.png
     website: http://engage.isaca.org/norwaychapter/
+  - name: Hack The Box
+    logo: hackthebox.png
+    website: https://www.hackthebox.eu/  
    
 
 exclude: ['src', 'node_modules', 'gulpfile.js','.sass-cache']
