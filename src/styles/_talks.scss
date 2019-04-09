@@ -80,11 +80,11 @@
 }
 
 @media only screen and (max-width: 600px){
-
 #speakers .speaker{
   width: 100px;
   min-height: 230px;
-  padding: 0 2% 2% 2%;
+  padding: 0;
+  margin: 0 2% 0 5%;
 }
 
 .speaker .name {
