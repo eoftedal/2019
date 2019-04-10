@@ -5,19 +5,22 @@ title: BSides Oslo - May 23rd, 2019
    <section id="Speakers">
       <h1>Speakers</h1>
       {% if site.talks != null %}
-      {% for talk in site.talks %}
+       <div class="speakerlist">
+        {% for talk in site.talks %}
 
-      {% for speaker in talk.speakers %}
-      <a href="{{ talk.url }}"><div class="speaker"><div class="image" style="background-image: url(/assets/images/speakers/{{ speaker.image }})" alt="{{ speaker.name }}"></div>
-	<div class="placeholderText name"><p>{{ speaker.name }}</p></div><div class="placeholderText talk"><p>{{ talk.title }}</p></div>
-      </div></a>
-      {% endfor %}
-      
-      {% endfor %}
+        {% for speaker in talk.speakers %}
+          <a href="{{ talk.url }}"><div class="speaker"><div class="image" style="background-image: url(/assets/images/speakers/{{ speaker.image }})" alt="{{ speaker.name }}"></div>
+	         <div class="placeholderText name"><p>{{ speaker.name }}</p></div><div class="placeholderText talk"><p>{{ talk.title }}</p></div>
+          </div>
+          </a>
+        {% endfor %}    
+        {% endfor %}
+      </div>
       {% else %}
       <p>We'll start announcing speakers shortly</p>
       {% endif %}
       </section>
+
 </div>
  <div class="user-details inverted">
    <section id="about">
