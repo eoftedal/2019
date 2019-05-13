@@ -1,6 +1,7 @@
 ---
 layout: talks
 title: "Smart Locks: Dumb Security"
+scheduled: "16:00"
 speakers:
 - name: David Lodge
   image: DavidLodge.jpg

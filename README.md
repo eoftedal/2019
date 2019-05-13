@@ -44,6 +44,10 @@ If text is multi-line (like with bio or description), just start use | jump down
 
 Only Bio can be multi-line though.
 
+## Program
+
+The problam is built up using the list in `_data/program.yaml` for non-talks and the talks themselves. It uses a `title` and `scheduled`, which is the scheduled time. 
+
 ## Sponsors
 
 To add sponsors, update the `sponsors` object in "_config.yaml". Add the information under the correct tier, and the logo in assets/images/sponsors.

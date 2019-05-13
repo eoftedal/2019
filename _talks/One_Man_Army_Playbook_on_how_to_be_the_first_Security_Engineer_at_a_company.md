@@ -1,6 +1,7 @@
 ---
 layout: talks
 title: "One Man Army - Playbook on how to be the first security engineer at a company"
+scheduled: "15:00"
 speakers:
 - name: Kashish Mittal
   image: KashishMittal.jpg

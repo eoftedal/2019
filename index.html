@@ -22,6 +22,31 @@ title: BSides Oslo - May 23rd, 2019
       </section>
 
 </div>
+<div class="program inverted">
+	<section id="Program">
+	<h1>Program</h1>
+	<ul>
+	{% assign program = site.data.program | concat: site.talks | sort: "scheduled" %} 
+
+	{% for spot in program %}
+	{% if spot.url %}
+	<li><a href="{{ spot.url }}">{{ spot.scheduled }} - {{ spot.title }}</a></br>
+			{% assign speakers = spot.speakers | map: 'name' %}
+			<i>{{ speakers | join: ", " }}</i>
+		</li>
+	{% else %}
+	<li>{{ spot.scheduled }} - {{ spot.title }}</li>
+	{% endif %}
+	{% endfor %}
+	</ul>
+	</section>
+</div>
+<div class="user-details">
+<section id="CoC">
+<h1>Code of conduct</h1>
+<p>BSides Oslo is a safe and inclusive community based conference, aimed at sharing information security knowledge. Speakers, participants, organizers and voulenteers are required to read and adhere to the <a href="/files/Bsides_Oslo_CoC.pdf" title="Code of conduct">code of conduct</a>.
+</section>
+</div>
  <div class="user-details inverted">
    <section id="about">
 	   <h1>About</h1>
@@ -65,12 +90,6 @@ title: BSides Oslo - May 23rd, 2019
 
 </div>
 <div class="user-details inverted">
-<section id="CoC">
-<h1>Code of conduct</h1>
-<p>BSides Oslo is a safe and inclusive community based conference, aimed at sharing information security knowledge. Speakers, participants, organizers and voulenteers are required to read and adhere to the <a href="/files/Bsides_Oslo_CoC.pdf" title="Code of conduct">code of conduct</a>.
-</section>
-</div>
-<div class="user-details">
   <section id="team">
  <h1>The BSidesOslo Team</h1>
 
@@ -86,8 +105,8 @@ title: BSides Oslo - May 23rd, 2019
  </ul>
 </section>
 </div>
- <div class="user-details">
-   <section id="contact" style="text-align:center">
+<div class="user-details" style="text-align:center;padding-bottom:0">
+   <section id="contact">
    <h1>Contact</h1>
 
    <p>Please drop us a note at <a href="mailto:{{site.email_info}}">{{site.email_info}}</a> if you have questions or would like to offer your support.</p>

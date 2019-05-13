@@ -1,6 +1,7 @@
 ---
 layout: talks
 title: When business critical systems have critical design errors, the story of a disclosure
+scheduled: "14:00"
 speakers:
 - name: Hans-Petter Fjeld
   image: HansPetterFjeld.jpg

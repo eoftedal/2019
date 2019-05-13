@@ -1,0 +1,11 @@
+- title: Registration and breakfast
+  scheduled: "08:30"
+- title: Welcome
+  scheduled: "09:00"
+- title: Lunch
+  scheduled: "12:00"
+- title: Finishing up
+  scheduled: "16:45"
+- title: Dinner and party
+  scheduled: "17:00"
+
