@@ -4,7 +4,13 @@
 {% include small_header.html %}
 <div id="talk">
 <h2>{{ page.title }}</h2>
-  <p><i>Time: {{ page.scheduled }}</i></p>
+  <p>
+  	<i>
+		Time: {{ page.scheduled }}</br>
+		Length: {{ page.length }} minutes
+	</i>
+  	
+  </p>
   <p>{{ content }}</p>
   {% if page.speakers.size > 1 %}
   <h3>Speakers:</h3>
