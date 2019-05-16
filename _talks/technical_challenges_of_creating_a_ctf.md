@@ -2,6 +2,7 @@
 layout: talks
 title: Technical challenges of creating a CTF
 scheduled: "13:00"
+length: 45
 speakers:
 - name: Marit Iren R. Tokle
   image: marit_tokle.jpg

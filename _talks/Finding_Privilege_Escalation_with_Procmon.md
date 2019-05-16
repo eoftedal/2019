@@ -1,7 +1,8 @@
 ---
 layout: talks
 title: Finding Privilege Escalation with Procmon
-scheduled: "11:00"
+scheduled: "14:00"
+length: 45
 speakers:
 - name: Vetle Økland
   image: vetle.jpg
