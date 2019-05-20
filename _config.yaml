@@ -58,6 +58,9 @@ sponsors:
   - name: Hack The Box
     logo: hackthebox.png
     website: https://www.hackthebox.eu/  
+  - name: Secure Practice
+    logo: SecurePractice.png
+    website: https://mailrisk.com
    
 
 exclude: ['src', 'node_modules', 'gulpfile.js','.sass-cache']
