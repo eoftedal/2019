@@ -3,6 +3,7 @@ layout: talks
 title: Making your website vulnerable for fun and security awareness
 scheduled: "11:20"
 length: 20
+video: https://www.youtube.com/watch?v=2lS08821YH0
 speakers:
 - name: Kenny Jansson
   image: kenny.jpg

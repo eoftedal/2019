@@ -3,6 +3,7 @@ layout: talks
 title: Barbarians in the Throne Room
 scheduled: "09:10"
 length: 45
+video: https://www.youtube.com/watch?v=WRF-K_iTBQs
 speakers:
 - name: Dave Lewis
   image: dave-2019.jpg

@@ -3,6 +3,7 @@ layout: talks
 title: Appsec requirements with OWASP ASVS
 scheduled: "11:00"
 length: 20
+video: https://www.youtube.com/watch?v=wvEgomz8Btc
 speakers:
 - name: Erlend Andreas Gjære
   image: ErlendGjaere.jpeg
