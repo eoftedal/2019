@@ -3,8 +3,8 @@ layout: talks
 title: Forensic analysis of privacy-focused mobile browsers in Android Devices 
 scheduled: "11:40"
 length: 20
-speakers:
 video: https://www.youtube.com/watch?v=dzpkHMLg4WQ
+speakers:
 - name: Lorena Carthy
   image: lorena.jpg
   bio: |
