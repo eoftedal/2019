@@ -3,6 +3,7 @@ layout: talks
 title: "Smart Locks: Dumb Security"
 scheduled: "16:00"
 length: 45
+video: https://www.youtube.com/watch?v=jTmET2_4Zmk
 speakers:
 - name: David Lodge
   image: DavidLodge.jpg
