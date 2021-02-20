@@ -1,51 +1,94 @@
 ---
 title: BSides Oslo - May 23rd, 2019
 ---
- <div class="user-details">
-   <section id="about">
-     <h1>About</h1>
-    <p>We're a Norwegian non-profit in the early stages of planning BSides Oslo 2019, and excited that we're already receiving interest and questions. BSides is about being good to the community so we want to share the details we have so far, even if they are not finalized yet. We also want to let you know who's behind this and how you get in touch if you have questions or would like to help out.</p>
+ <div id="speakers">
+   <section id="Speakers">
+      <h1>Speakers</h1>
+      {% if site.talks != null %}
+       <div class="speakerlist">
+        {% for talk in site.talks %}
 
-    <p>We're working with the support of the kind and experienced folks at <a href="http://www.securitybsides.org">securitybsides.org</a> to bring a new kind of infosec event to Oslo. The plan is to start with a 1-day, 1-track event with the hope of expanding in the future. The date will be May 23rd, 2019, at MESH in the middle of central Oslo.</p>
-    
-    <p> We've launched and are currently accepting submission in our <a href="#cfp">call for papers (CFP)</a> and have officially started <a href="#sponsorship">fundraising.</a></p>
-  </section>
-</div>
- <div class="user-details">
-   <section id="CFP">
-      <h1>CFP</h1>
-      <p><b>Our Call for Presenters is <a href="{{ site.cfp_form }}">open until March 8th, 2019.</a></b></p>
- 
-      <p>We want to hear from brand new speakers, seasoned speakers, and everyone in between! We're open to submissions on a wide range of information security and privacy topics. Here are a few suggestions:</p>
-      
-      <ul> 
-        <li>Network security.</li>
-        <li>Web Application security.</li>
-        <li>Mobile security.</li>
-        <li>Virtualization and cloud computing.</li>
-        <li>Innovative attack / Defense strategies.</li>
-        <li>Forensics / Malware.</li>
-        <li>Embedded device security / Internet of things.</li>
-        <li>Artificial intelligence safety and security.</li>
-        <li>Open source intelligence.</li>
-        <li>Biometrics.</li>
-        <li>European Train Control System / European Rail Traffic Management System.</li>
-        <li>Real world cases, responsibly disclosed.</li>
-      </ul>
-      
-      <p>We use Google Forms for submission, and you can find our form here: <a href="{{ site.cfp_form }}">{{ site.cfp_form }}</a>.</p>
-      <p>If you have any questions regarding the CFP, please contact us at <a href="mailto:{{ site.email_cfp }}">{{ site.email_cfp }}</a>.</p>
-      
+        {% for speaker in talk.speakers %}
+          <a href="{{ talk.url }}"><div class="speaker"><div class="image" style="background-image: url(/assets/images/speakers/{{ speaker.image }})" alt="{{ speaker.name }}"></div>
+	         <div class="placeholderText name"><p>{{ speaker.name }}</p></div><div class="placeholderText talk"><p>{{ talk.title }}</p></div>
+          </div>
+          </a>
+        {% endfor %}    
+        {% endfor %}
+      </div>
+      {% else %}
+      <p>We'll start announcing speakers shortly</p>
+      {% endif %}
       </section>
-</div>
- <div class="user-details">
-  <section id="sponsorship">
-    <h1>Sponsorship</h1>
-    <p>We're currently looking for sponsors. If you are interested (or know of someone who might be), feel free to look at the <a href="/files/sponsorship.pdf">sponsorship document</a> or get in touch at  <a href="mailto:{{site.email_sponsorship}}">{{site.email_sponsorship}}</a>.</p>
-  </section>
 
+</div>
+<div class="program inverted">
+	<section id="Program">
+	<h1>Program</h1>
+	<ul>
+	{% assign program = site.data.program | concat: site.talks | sort: "scheduled" %} 
+
+	{% for spot in program %}
+	{% if spot.url %}
+	<li><a href="{{ spot.url }}">{{ spot.scheduled }} - {{ spot.title }}</a></br>
+			{% assign speakers = spot.speakers | map: 'name' %}
+			<i>{{ speakers | join: ", " }}</i>
+		</li>
+	{% else %}
+	<li>{{ spot.scheduled }} - {{ spot.title }}</li>
+	{% endif %}
+	{% endfor %}
+	</ul>
+	</section>
 </div>
 <div class="user-details">
+<section id="CoC">
+<h1>Code of conduct</h1>
+<p>BSides Oslo is a safe and inclusive community based conference, aimed at sharing information security knowledge. Speakers, participants, organizers and voulenteers are required to read and adhere to the <a href="/files/Bsides_Oslo_CoC.pdf" title="Code of conduct">code of conduct</a>.
+</section>
+</div>
+ <div class="user-details inverted">
+   <section id="about">
+	   <h1>About</h1>
+	   <p>Security BSides is a global network of independent community-driven and inclusive information security events. The first Security BSides in Oslo will be held on May 23rd, 2019 at MESH (Tordenskiolds gate 3), in the middle of central Oslo.</p><p>We've already gotten a lot of support from the local community, including <a href="#Sponsors">several sponsors</a>. We've announced our speakers <a href="#Speakers">announcing speakers</a>, and also <a href="#Program">posted our program</a>.</p>    
+  </section>
+</div>
+ <div class="user-details">
+  <section id="Sponsors">
+    <h1>Sponsors</h1>
+    {% if site.sponsors.gold != null %}
+    <h2>Gold sponsors</h2>
+    <div class="sponsor-logo-bar gold">
+	{% for sponsor in site.sponsors.gold %}
+
+	<a title="{{ sponsor.name }}" href="{{ sponsor.website  }}"><img src="/assets/images/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
+	{% endfor %}	
+    </div>
+   {% endif %}
+    {% if site.sponsors.standard != null %}
+    <h2>Standard sponsors</h2>
+    <div class="sponsor-logo-bar standard">
+	{% for sponsor in site.sponsors.standard %}
+
+	<a title="{{ sponsor.name }}" href="{{ sponsor.website  }}"><img src="/assets/images/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
+	{% endfor %}	
+    </div>
+   {% endif %}
+    {% if site.sponsors.community != null %}
+
+    <h2>Community sponsors</h2>
+<div class="sponsor-logo-bar community">
+	{% for sponsor in site.sponsors.community %}
+
+	<a title="{{ sponsor.name }}" href="{{ sponsor.website  }}"><img src="/assets/images/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.name }}" /></a>
+	{% endfor %}	
+    </div>
+   {% endif %}
+   <p>We'd like to thank our wonderful sponsors for making BSides Oslo 2019 possible</p>
+  </section>
+
+</div>
+<div class="user-details inverted">
   <section id="team">
  <h1>The BSidesOslo Team</h1>
 
@@ -61,8 +104,8 @@ title: BSides Oslo - May 23rd, 2019
  </ul>
 </section>
 </div>
- <div class="user-details">
-   <section id="contact" style="text-align:center">
+<div class="user-details" style="text-align:center;padding-bottom:0">
+   <section id="contact">
    <h1>Contact</h1>
 
    <p>Please drop us a note at <a href="mailto:{{site.email_info}}">{{site.email_info}}</a> if you have questions or would like to offer your support.</p>

@@ -12,7 +12,6 @@ article, aside, figcaption, figure, footer, header, nav, section {
     display: block;
 }
 h1, h2, h3, h4, stong {
-    margin-top: 1em;
     padding-top: 1em;
     line-height: 1.25;
     color: #333;
@@ -22,6 +21,7 @@ h1 {
 }
 h2 {
     font-size: 2rem;
+    text-align: center;
 }
 h3 {
     font-size: 1.5rem;
@@ -41,4 +41,45 @@ a img {
 }
 sup, sub {
     line-height: 0;
+}
+
+.sponsor-logo-bar {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.sponsor-logo-bar img {
+    border: none;
+    margin:0;
+    padding-bottom: 2%;
+    padding-right: 4%;
+}
+
+.gold img {
+    max-width: 30%;
+}
+
+.standard img {
+    max-width: 20%;
+}
+
+.community img {
+    max-width: 10%;
+}
+@media only screen and (max-width: 600px){
+
+.gold img {
+    max-width: 40%;
+}
+	
+.standard img {
+    max-width: 30%;
+}
+	
+.community img {
+    max-width: 20%;
+}
 }

@@ -19,22 +19,9 @@ gulp.task('jekyll-build', function (done) {
 		.on('close', done);
 });
 
-/*
- * Rebuild Jekyll & reload browserSync
- */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-	browserSync.reload();
-});
-
-/*
- * Build the jekyll site and launch browser-sync
- */
-gulp.task('browser-sync', ['jekyll-build'], function() {
-	browserSync({
-		server: {
-			baseDir: '_site'
-		}
-	});
+gulp.task('host',['jekyll-build'], function (done) {
+	return cp.spawn(jekyllCommand, ['serve', '-H', '0.0.0.0', '--watch'], {stdio: 'inherit'})
+		.on('close', done);
 });
 
 /*
@@ -79,11 +66,11 @@ gulp.task('js', function(){
 });
 
 gulp.task('watch', function() {
-  gulp.watch('src/styles/**/*.scss', ['sass', 'jekyll-rebuild']);
+  gulp.watch('src/styles/**/*.scss', ['sass', 'host']);
   gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/fonts/**/*.{tff,woff,woff2}', ['fonts']);
   gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
-  gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], ['jekyll-rebuild']);
+  gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], ['host']);
 });
 
-gulp.task('default', ['js', 'sass', 'fonts', 'browser-sync', 'watch']);
+gulp.task('default', ['js', 'sass', 'fonts', 'host','watch']);

@@ -6,14 +6,68 @@ date: May 23rd, 2019
 email_info: info@bsidesoslo.no
 email_sponsorship: sponsors@bsidesoslo.no
 email_cfp: cfp@bsidesoslo.no
-cfp_form: https://goo.gl/forms/dWVz94nK7Ohkn3eK2
+
+youtube: https://www.youtube.com/channel/UC6kTOacrQTu1ahmRCvXhhrA
 twitter_username: oslobsides
 
+collections:
+  talks:
+    output: true
+    layout: talks
 
-sass:
-  sass_dir: "src/styles"
+sponsors:
+  gold:
+  - name: Nagarro
+    logo: Nagarro.png
+    website: https://www.nagarro.com/en
+  - name: Bouvet
+    logo: Bouvet.png
+    website: https://www.bouvet.no
+  - name: Basefarm
+    logo: Basefarm.png
+    website: https://www.basefarm.com/no/
+  standard:
+  - name: TrustedSec
+    logo: trustedsec.png
+    website: https://www.trustedsec.com/
+  - name: Transcendent Group
+    logo: Transcendent.png
+    website: https://transcendentgroup.com/
+  - name: Gelato
+    logo: Gelato.png
+    website: https://gelato.com
+  - name: BDO Cybersecurity
+    logo: BDOcybersecurity.png
+    website: https://www.bdo.no/nb-no/tjenester/radgivning/cybersecurity
+  - name: Paranoia
+    logo: Paranoia.png
+    website: https://paranoia.watchcom.no/
+  - name: Sopra Steria
+    logo: SopraSteria.png
+    website: https://www.soprasteria.no/       
+  community:
+  - name: Blaze Information Security
+    logo: Blaze.png
+    website: https://www.blazeinfosec.com/
+  - name: TurtleSec
+    logo: turtlesec.png
+    website: https://turtlesec.no/
+  - name: ISACA
+    logo: isaca.png
+    website: http://engage.isaca.org/norwaychapter/
+  - name: Hack The Box
+    logo: hackthebox.png
+    website: https://www.hackthebox.eu/  
+  - name: Secure Practice
+    logo: SecurePractice.png
+    website: https://mailrisk.com
+   
 
-exclude: ['src']
+exclude: ['src', 'node_modules', 'gulpfile.js','.sass-cache']
+
+markdown: kramdown
+kramdown:
+  input: GFM
 
 defaults:
 - scope:

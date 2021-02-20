@@ -1,0 +1,34 @@
+<html lang="en">
+{% include head.html %}
+<body>
+{% include small_header.html %}
+<div id="talk">
+<h2>{{ page.title }}</h2>
+  <p>
+  	<i>
+		Time: {{ page.scheduled }}</br>
+		Length: {{ page.length }} minutes</br>
+		<b>Recording: <a href="{{ page.video }}">{{ page.video }}</a></b>
+	</i>
+  	
+  </p>
+  <p>{{ content }}</p>
+  {% if page.speakers.size > 1 %}
+  <h3>Speakers:</h3>
+  {% else %}
+  <h3>Speaker:</h3>
+  {% endif %}
+  {% for speaker in page.speakers %}
+    <div class="speaker">
+      <div class="image" style="background-image: url(/assets/images/speakers/{{speaker.image}}" alt="{{ speaker.name }}"></div>
+         <h3>{{ speaker.name }}</h3>
+	 <p>{% if speaker.twitter %}Twitter: <a href="https://twitter.com/{{ speaker.twitter }}" alt="{{ speaker.twitter }}">@{{ speaker.twitter }}</a>{% endif %}</p>
+         <p>{{ speaker.bio }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{%include footer.html %}
+</body>
+</html>
+
